@@ -3,7 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['saisi-nft-marketplace.infura-ipfs.io'],
+    protocol: 'https',
+    hostname: 'exzo-network.infura-ipfs.io',
+    port: '',
+    pathname: '/ipfs/**',
+    domains: ['exzo-network.infura-ipfs.io'],
   },
 };
 
