@@ -119,17 +119,17 @@ const Navbar = () => {
   }, [router.pathname]);
 
   return (
-    <nav className="flexBetween w-full fixed z-10 p-4 flex-row border-b dark:bg-nft-dark bg-white dark:border-nft-black-1 border-nft-gray-1">
-      <div className="flex flex-1 flex-row justify-start">
+    <nav className="fixed z-10 flex-row w-full p-4 bg-white border-b flexBetween dark:bg-nft-dark dark:border-nft-black-1 border-nft-gray-1">
+      <div className="flex flex-row justify-start flex-1">
         <Link href="/">
           <div
-            className="flexCenter md:hidden cursor-pointer"
+            className="cursor-pointer flexCenter md:hidden"
             onClick={() => {
               setActive('Explore NFTs');
             }}
           >
-            <Image src={images.techiveLogo} objectFit="contain" width={32} height={32} alt="logo" className="rounded-xl" />
-            <p className="dark:text-white text-nft-black-1 font-semibold text-lg ml-1">tecHive</p>
+            <Image src={images.logo02} objectFit="contain" width={32} height={32} alt="logo" className="rounded-xl" />
+            <p className="ml-1 text-lg font-semibold dark:text-white text-nft-black-1">Kinetix Labs</p>
           </div>
         </Link>
         <Link href="/">
@@ -144,13 +144,13 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      <div className="flex flex-initial flex-row justify-end">
+      <div className="flex flex-row justify-end flex-initial">
         <div className="flex items-center mr-2">
           <input type="checkbox" name="checkbox" id="checkbox" className="checkbox" onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
-          <label htmlFor="checkbox" className="flexBetween w-8 h-4 bg-black rounded-2xl p-1 relative label">
+          <label htmlFor="checkbox" className="relative w-8 h-4 p-1 bg-black flexBetween rounded-2xl label">
             <i className="fas fa-sun" />
             <i className="fas fa-moon" />
-            <div className="w-3 h-3 absolute bg-white rounded-full ball" />
+            <div className="absolute w-3 h-3 bg-white rounded-full ball" />
           </label>
         </div>
 
@@ -162,7 +162,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex ml-2">
+      <div className="hidden ml-2 md:flex">
         {isOpen ? (
           <Image
             src={images.cross}
@@ -186,7 +186,7 @@ const Navbar = () => {
         )}
 
         {isOpen && (
-          <div className="fixed inset-0 top-65 dark:bg-nft-dark bg-white z-10 nav-h flex justify-between flex-col">
+          <div className="fixed inset-0 z-10 flex flex-col justify-between bg-white top-65 dark:bg-nft-dark nav-h">
             <div className="flex-1 p-4">
               <MenuItems active={active} setActive={setActive} isMobile setIsOpen={setIsOpen} />
             </div>

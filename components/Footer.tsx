@@ -11,10 +11,10 @@ type FooterLinksProps = {
 };
 
 const FooterLinks = ({ heading, items }: FooterLinksProps) => (
-  <div className="flex-1 justify-start items-start">
-    <h3 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl mb-10">{heading}</h3>
+  <div className="items-start justify-start flex-1">
+    <h3 className="mb-10 text-xl font-semibold font-poppins dark:text-white text-nft-black-1">{heading}</h3>
     {items.map((item, index) => (
-      <p className="font-poppins dark:text-white text-nft-black-1 font-normal text-base cursor-pointer dark:hover:text-nft-gray-1 hover:text-nft-black-1 my-3" key={index}>{item}</p>
+      <p className="my-3 text-base font-normal cursor-pointer font-poppins dark:text-white text-nft-black-1 dark:hover:text-nft-gray-1 hover:text-nft-black-1" key={index}>{item}</p>
     ))}
   </div>
 );
@@ -23,19 +23,19 @@ const Footer = () => {
   const { theme } = useTheme();
 
   return (
-    <footer className="flexCenter flex-col border-t dark:border-nft-black-1 border-nft-gray-1 sm:py-8 py-16">
-      <div className="w-full minmd:w-4/5 flex flex-row md:flex-col  sm:px-4 px-16">
-        <div className="flexStart flex-1 flex-col">
-          <div className="flexCenter cursor-pointer">
-            <Image src={images.techiveLogo} objectFit="contain" width={32} height={32} alt="logo" className="rounded-xl" />
-            <p className="dark:text-white text-nft-black-1 font-semibold text-lg ml-1">tecHive</p>
+    <footer className="flex-col py-16 border-t flexCenter dark:border-nft-black-1 border-nft-gray-1 sm:py-8">
+      <div className="flex flex-row w-full px-16 minmd:w-4/5 md:flex-col sm:px-4">
+        <div className="flex-col flex-1 flexStart">
+          <div className="cursor-pointer flexCenter">
+            <Image src={images.logo02} objectFit="contain" width={32} height={32} alt="logo" className="rounded-xl" />
+            <p className="ml-1 text-lg font-semibold dark:text-white text-nft-black-1">Kinetix Labs</p>
           </div>
-          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base mt-6">Get the Latest Updates</p>
-          <div className="flexBetween md:w-full minlg:w-557 w-357 mt-6 dark:bg-nft-black-2 bg-white dark:border-nft-black-2 border-nft-gray-2 rounded-md">
+          <p className="mt-6 text-base font-semibold font-poppins dark:text-white text-nft-black-1">Get the Latest Updates</p>
+          <div className="mt-6 bg-white rounded-md flexBetween md:w-full minlg:w-557 w-357 dark:bg-nft-black-2 dark:border-nft-black-2 border-nft-gray-2">
             <input
               type="email"
               placeholder="Your Email"
-              className="h-full flex-1 w-full dark:bg-nft-black-2 bg-white px-4 rounded-md dark:text-white text-nft-black-1 font-normal text-xs minlg:text-lg outline-none"
+              className="flex-1 w-full h-full px-4 text-xs font-normal bg-white rounded-md outline-none dark:bg-nft-black-2 dark:text-white text-nft-black-1 minlg:text-lg"
             />
             <div className="flex-initial">
               <Button btnName="Email me" classStyles="rounded-md" />
@@ -43,15 +43,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex-1 flexBetweenStart flex-wrap ml-10 md:ml-0 md:mt-8">
+        <div className="flex-wrap flex-1 ml-10 flexBetweenStart md:ml-0 md:mt-8">
           <FooterLinks heading="tecHive" items={['Explore', 'How it Works', 'Contact Us']} />
           <FooterLinks heading="Support" items={['Help center', 'Terms of Service', 'Legal', 'Privacy policy']} />
         </div>
       </div>
 
-      <div className="flexCenter w-full mt-5 border-t dark:border-nft-black-1 border-nft-gray-1 sm:px-4 px-16">
-        <div className="flexBetween flex-row w-full minmd:w-4/5 sm:flex-col mt-7">
-          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-base">tecHive, Inc. All Rights Reserved.</p>
+      <div className="w-full px-16 mt-5 border-t flexCenter dark:border-nft-black-1 border-nft-gray-1 sm:px-4">
+        <div className="flex-row w-full flexBetween minmd:w-4/5 sm:flex-col mt-7">
+          <p className="text-base font-semibold font-poppins dark:text-white text-nft-black-1">Kinetix Labs, Inc. All Rights Reserved.</p>
           <div className="flex flex-row sm:mt-4">
             {[images.instagram, images.twitter, images.telegram, images.discord].map((image, index) => (
               <div className="mx-2 cursor-pointer" key={index}>
