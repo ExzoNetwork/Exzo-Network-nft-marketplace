@@ -72,7 +72,7 @@ interface NFTContextInterface {
 export const [useCurrentNFTContext, NFTContextProvider] = createCtx<NFTContextInterface>();
 
 export const NFTProvider = ({ children }: { children: React.ReactNode }) => {
-  const nftCurrency = 'MATIC';
+  const nftCurrency = 'AVAX';
   const [currentAccount, setCurrentAccount] = useState('');
   const [isLoadingNFT, setIsLoadingNFT] = useState(false);
 
