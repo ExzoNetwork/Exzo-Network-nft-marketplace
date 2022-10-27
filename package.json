@@ -13,9 +13,12 @@
   },
   "dependencies": {
     "@metamask/providers": "^9.1.0",
+    "@mui/icons-material": "^5.10.9",
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
     "@openzeppelin/contracts": "4.5.0",
+    "@reduxjs/toolkit": "^1.8.6",
     "axios": "0.26.0",
+    "dotenv": "^16.0.3",
     "ethers": "^5.6.9",
     "hardhat": "^2.10.1",
     "ipfs-http-client": "56.0.1",
