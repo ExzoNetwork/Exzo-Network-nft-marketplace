@@ -9,7 +9,7 @@ import { NFTProvider } from '../context/NFTContext';
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <NFTProvider>
     <ThemeProvider attribute="class">
-      <div className="dark:bg-nft-dark bg-white min-h-screen">
+      <div className="min-h-screen bg-white bg-color">
         <Navbar />
         <div className="pt-65">
           <Component {...pageProps} />

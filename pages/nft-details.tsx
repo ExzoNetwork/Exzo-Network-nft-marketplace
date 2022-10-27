@@ -29,18 +29,18 @@ const PaymentBodyCmp = ({ nft, nftCurrency }: PaymentBodyCmpProps) => (
           />
         </div>
         <div className="flexCenterStart flex-col ml-5">
-          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-sm minlg:text-xl">{shortenAddress(nft.seller)}</p>
-          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-sm minlg:text-xl">{nft.name}</p>
+          <p className="font-poppins dark:text-white  font-semibold text-sm minlg:text-xl">{shortenAddress(nft.seller)}</p>
+          <p className="font-poppins dark:text-white font-semibold text-sm minlg:text-xl">{nft.name}</p>
         </div>
       </div>
       <div className="">
-        <p className="font-poppins dark:text-white text-nft-black-1 text-sm minlg:text-xl font-normal">{nft.price} <span className="font-semibold">{nftCurrency}</span></p>
+        <p className="font-poppins dark:text-white text-sm minlg:text-xl font-normal">{nft.price} <span className="font-semibold">{nftCurrency}</span></p>
       </div>
     </div>
 
     <div className="flexBetween mt-10">
-      <p className="font-poppins dark:text-white text-nft-black-1 text-base minlg:text-xl font-normal">Total</p>
-      <p className="font-poppins dark:text-white text-nft-black-1 text-sm minlg:text-xl font-normal">{nft.price} <span className="font-semibold">{nftCurrency}</span></p>
+      <p className="font-poppins dark:text-white text-base minlg:text-xl font-normal">Total</p>
+      <p className="font-poppins dark:text-white text-sm minlg:text-xl font-normal">{nft.price} <span className="font-semibold">{nftCurrency}</span></p>
     </div>
   </div>
 );
