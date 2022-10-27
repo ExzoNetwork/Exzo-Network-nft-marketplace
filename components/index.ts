@@ -8,5 +8,6 @@ import NFTCard from './NFTCard';
 import Loader from './Loader';
 import Modal from './Modal';
 import SearchBar from './SearchBar';
+import Hero from './Hero';
 
-export { Navbar, Footer, Button, Banner, CreatorCard, NFTCard, Input, Loader, Modal, SearchBar };
+export { Navbar, Footer, Button, Banner, CreatorCard, NFTCard, Input, Loader, Modal, SearchBar, Hero };
